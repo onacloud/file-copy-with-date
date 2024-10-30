@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- 배경 -->
+    <rect width="128" height="128" fill="#2d2d2d" rx="20" ry="20"/>
+    
+    <!-- 파일 모양 (뒤) -->
+    <rect x="45" y="20" width="70" height="85" fill="#75beff" rx="5" ry="5"/>
+    
+    <!-- 파일 모양 (앞) -->
+    <rect x="25" y="35" width="70" height="85" fill="#4d9fff" rx="5" ry="5"/>
+    
+    <!-- 날짜 텍스트 표현 -->
+    <rect x="35" y="65" width="50" height="8" fill="#ffffff" rx="2" ry="2"/>
+    <rect x="35" y="80" width="40" height="8" fill="#ffffff" rx="2" ry="2"/>
+    <rect x="35" y="95" width="45" height="8" fill="#ffffff" rx="2" ry="2"/>
+</svg>

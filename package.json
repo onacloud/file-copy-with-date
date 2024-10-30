@@ -3,6 +3,21 @@
   "displayName": "File Copy with Date",
   "description": "파일을 날짜 접미사를 붙여 복사하는 확장기능",
   "version": "0.0.1",
+  "publisher": "onacloud",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onacloud/file-copy-with-date"
+  },  
+  "icon": "images/icon.png",
+  "author": {
+    "name": "onacloud"
+  },
+  "license": "MIT",
+  "keywords": ["file", "utility", "date", "copy"],
+  "galleryBanner": {
+      "color": "#2d2d2d",
+      "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -14,10 +29,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "file-copy-with-date.helloWorld",
-        "title": "Hello World"
+        "command": "extension.copyFileWithDate",
+        "title": "Copy File With Date"
       }
-    ]
+    ],
+    "keybindings": [{
+      "command": "extension.copyFileWithDate",
+      "key": "ctrl+alt+d",  
+      "mac": "cmd+alt+d",
+      "when": "editorTextFocus"
+    }]    
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
