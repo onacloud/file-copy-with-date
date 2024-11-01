@@ -2,29 +2,39 @@
   "name": "file-copy-with-date",
   "displayName": "File Copy with Date",
   "description": "파일을 날짜 접미사를 붙여 복사하는 확장기능",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "onacloud",
   "repository": {
     "type": "git",
     "url": "https://github.com/onacloud/file-copy-with-date"
-  },  
+  },
   "icon": "images/icon.png",
   "author": {
     "name": "onacloud"
   },
   "license": "MIT",
-  "keywords": ["file", "utility", "date", "copy"],
+  "keywords": [
+    "file",
+    "utility",
+    "date",
+    "copy"
+  ],
   "galleryBanner": {
-      "color": "#2d2d2d",
-      "theme": "dark"
+    "color": "#2d2d2d",
+    "theme": "dark"
   },
   "engines": {
-    "vscode": "^1.95.0"
+    "vscode": "^1.74.0"
   },
+  "extensionKind": [
+    "workspace",
+    "ui"
+  ],
   "categories": [
     "Other"
   ],
   "activationEvents": [],
+  "browser": "./out/web/extension.js",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -33,30 +43,32 @@
         "title": "Copy File With Date"
       }
     ],
-    "keybindings": [{
-      "command": "extension.copyFileWithDate",
-      "key": "ctrl+alt+d",  
-      "mac": "cmd+alt+d",
-      "when": "editorTextFocus"
-    }]    
+    "keybindings": [
+      {
+        "command": "extension.copyFileWithDate",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "compile": "tsc -p ./ && tsc -p ./web.tsconfig.json",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0",
     "@types/mocha": "^10.0.9",
-    "@types/node": "20.x",
+    "@types/node": "^20.17.5",
+    "@types/vscode": "^1.60.0",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.13.0",
     "typescript": "^5.6.3",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "undici-types": "^6.20.0"
   }
 }
