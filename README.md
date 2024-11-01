@@ -80,7 +80,7 @@ code .
 
 ## 라이선스
 
-MIT License © [onacloud]
+Apache2 License 
 
 ---
 **Powered ❤️ by [claude.ai]**
