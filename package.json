@@ -2,7 +2,7 @@
   "name": "file-copy-with-date",
   "displayName": "File Copy with Date",
   "description": "파일을 날짜 접미사를 붙여 복사하는 확장기능",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "onacloud",
   "repository": {
     "type": "git",
